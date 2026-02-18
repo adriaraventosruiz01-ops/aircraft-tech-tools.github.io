@@ -2,51 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aircraft Tech Tools — Support</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Support – Aircraft Tech Tools</title>
+  <meta name="robots" content="index,follow" />
   <style>
-    :root { color-scheme: light dark; }
+    :root{
+      --bg:#071B33;
+      --bg2:#0A3A63;
+      --card:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.14);
+      --text:#EAF2FF;
+      --muted:rgba(234,242,255,.75);
+      --link:#72DFFF;
+      --btn:#2E5DB6;
+      --btn2:#1C3F86;
+    }
+    *{box-sizing:border-box}
     body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      margin: 40px;
-      max-width: 860px;
-      line-height: 1.55;
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 700px at 20% 10%, rgba(255,255,255,.10), transparent 60%),
+        linear-gradient(135deg, var(--bg2), var(--bg));
+      min-height:100vh;
     }
-    h1{ margin: 0 0 8px; }
-    .muted{ opacity: .8; }
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    header{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      width:44px;height:44px;
+      border-radius:12px;
+      background: linear-gradient(180deg, rgba(114,223,255,.45), rgba(46,93,182,.85));
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow: 0 10px 22px rgba(0,0,0,.28);
+    }
+    h1{
+      font-size: 20px;
+      margin:0;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .pill{
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.82);
+      font-size: 12px;
+      letter-spacing:.3px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 820px){
+      .grid{ grid-template-columns: 1.15fr .85fr; }
+    }
+
     .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
       padding: 16px;
-      border: 1px solid rgba(120,120,120,.35);
-      border-radius: 14px;
-      background: rgba(120,120,120,.08);
+      box-shadow: 0 18px 34px rgba(0,0,0,.20);
     }
-    a{ word-break: break-word; }
-    ul{ margin: 10px 0 0 18px; }
-    code{
-      padding: 2px 6px;
-      border-radius: 8px;
-      background: rgba(120,120,120,.12);
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing:.2px;
     }
+    p{
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height:1.45;
+      font-size: 14px;
+    }
+    .kv{
+      display:grid;
+      grid-template-columns: 130px 1fr;
+      gap: 8px 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      font-size: 14px;
+    }
+    .k{ color: rgba(255,255,255,.78); }
+    .v{ color: rgba(255,255,255,.92); overflow-wrap:anywhere; }
+
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.20);
+      background: linear-gradient(180deg, rgba(114,223,255,.30), rgba(46,93,182,.85));
+      color: rgba(255,255,255,.95);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing:.2px;
+      box-shadow: 0 14px 26px rgba(0,0,0,.25);
+    }
+    .btn.secondary{
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.90);
+      box-shadow:none;
+      font-weight: 700;
+    }
+
+    .note{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(255,255,255,.22);
+      background: rgba(0,0,0,.10);
+      color: rgba(255,255,255,.84);
+      font-size: 13px;
+    }
+
+    footer{
+      margin-top: 16px;
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+    }
+    .footerlinks{ display:flex; gap: 12px; flex-wrap:wrap; }
   </style>
 </head>
+
 <body>
-  <h1>Aircraft Tech Tools — Support</h1>
-  <p class="muted">Support page for MEL Date Calc.</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Aircraft Tech Tools</h1>
+          <div class="sub">Support & Contact</div>
+        </div>
+      </div>
+      <div class="pill">info@a32xtools.com</div>
+    </header>
 
-  <div class="card">
-    <p><strong>Contact:</strong> <a href="mailto:info@a32xtools.com">info@a32xtools.com</a></p>
+    <div class="grid">
+      <section class="card">
+        <h2>Support</h2>
+        <p>
+          If you need help, have a feature request, or want to report a bug, contact us by email.
+          Please include your device model and OS version, and a short description of what happened.
+        </p>
 
-    <p>When contacting support, please include:</p>
-    <ul>
-      <li>Device model</li>
-      <li>OS version (iOS / Android)</li>
-      <li>App version</li>
-      <li>Steps to reproduce (if it’s a bug)</li>
-    </ul>
+        <div class="btnrow">
+          <a class="btn" href="mailto:info@a32xtools.com?subject=Aircraft%20Tech%20Tools%20Support">
+            Email Support
+          </a>
 
-    <p style="margin-top:14px;">
-      <a href="/privacy.html">Privacy Policy</a>
-    </p>
+          <!-- Privacy link as you requested: absolute URL -->
+          <a class="btn secondary"
+             href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html"
+             target="_blank" rel="noopener">
+            Privacy Policy
+          </a>
+        </div>
+
+        <div class="note">
+          Tip: If you’re reporting a crash, describe the exact steps that led to it (screen → action → result).
+        </div>
+
+        <div class="kv">
+          <div class="k">Support email</div>
+          <div class="v"><a href="mailto:info@a32xtools.com">info@a32xtools.com</a></div>
+
+          <div class="k">Privacy Policy</div>
+          <div class="v">
+            <a href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html" target="_blank" rel="noopener">
+              https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>About</h2>
+        <p>
+          Aircraft Tech Tools provides quick utilities for line maintenance workflows, including MEL deadline calculation
+          and a Deferred Log (Pro) to track daily callouts, attach Tech Log photos, and generate a share-ready PDF report.
+        </p>
+        <p>
+          For store-related questions (purchases / Pro), include the order reference if available.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <div>© <span id="y"></span> Aircraft Tech Tools</div>
+      <div class="footerlinks">
+        <a href="mailto:info@a32xtools.com">Contact</a>
+        <a href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html" target="_blank" rel="noopener">
+          Privacy Policy
+        </a>
+      </div>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
