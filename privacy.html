@@ -2,75 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy Policy — Aircraft Tech Tools</title>
+  <meta name="robots" content="index,follow" />
   <style>
-    :root { color-scheme: light dark; }
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      margin: 40px;
-      max-width: 980px;
-      line-height: 1.6;
+    :root {
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.14);
+      --link: #79dfff;
+      --max: 900px;
     }
-    h1{ margin: 0 0 6px; }
-    h2{ margin-top: 22px; }
-    .muted{ opacity: .8; }
-    .card{
-      padding: 14px 16px;
-      border: 1px solid rgba(120,120,120,.35);
+    html,body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(121,223,255,.18), transparent 55%),
+                  radial-gradient(900px 450px at 80% 10%, rgba(46,93,182,.22), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      padding: 36px 18px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      letter-spacing: .2px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    main {
+      max-width: var(--max);
+      margin: 16px auto 48px;
+      padding: 0 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
       border-radius: 14px;
-      background: rgba(120,120,120,.08);
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
-    a{ word-break: break-word; }
-    ul{ margin: 8px 0 0 18px; }
+    h2 {
+      margin: 18px 0 8px;
+      font-size: 18px;
+    }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0 10px 18px; }
+    li { margin: 6px 0; color: var(--text); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: var(--muted); }
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    code {
+      background: rgba(0,0,0,.25);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,.10);
+      font-size: 12px;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="muted"><strong>Last updated:</strong> 2026-02-18</p>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Aircraft Tech Tools • Last updated: 2026-02-18</p>
+  </header>
 
-  <div class="card">
-    <p>
-      MEL Date Calc (“the app”) is provided by Aircraft Tech Tools.
-      This policy explains what data is collected and how it is used.
-    </p>
-  </div>
+  <main>
+    <div class="card">
+      <p>
+        Aircraft Tech Tools (“we”, “our”, “the app”) does not collect, store, or sell personal data.
+      </p>
 
-  <h2>Data you enter in the app</h2>
-  <p>
-    The app may store information you input, such as aircraft tail, defect text, WO/TL page,
-    and optional technical log photos. This data is stored locally on your device.
-  </p>
+      <h2>Ads (Free Version)</h2>
+      <p>
+        The free version displays banner advertising. Ads may be provided by third-party partners such as
+        Google AdMob. These partners may automatically collect certain information (for example: device
+        identifiers, approximate location, ad interaction data, and diagnostic information) to deliver and
+        measure ads, prevent fraud, and improve ad performance. We do not receive or store personally
+        identifying information from these partners.
+      </p>
+      <ul>
+        <li>
+          Google Privacy Policy:
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            https://policies.google.com/privacy
+          </a>
+        </li>
+        <li>
+          Google Ads / Ad Technology:
+          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
+            https://policies.google.com/technologies/ads
+          </a>
+        </li>
+      </ul>
 
-  <h2>Advertising (Free version)</h2>
-  <p>
-    The free version may show ads using Google Mobile Ads (AdMob).
-    Ad providers may collect device identifiers and usage data to serve ads and measure performance,
-    in accordance with their policies.
-  </p>
+      <h2>Photos and Local Data</h2>
+      <p>
+        If you choose to capture a Tech Log photo inside the app, the photo is stored locally on your device
+        (for example, in your gallery / local storage). We do not upload these photos to any server.
+      </p>
 
-  <h2>In-App Purchases (Pro)</h2>
-  <p>
-    Pro unlock is handled by Apple/Google billing. Purchase verification is performed through the store APIs.
-    We do not collect or store your payment details.
-  </p>
+      <h2>PDF Export and Sharing</h2>
+      <p>
+        The app can generate a PDF report that may include your entries and optional Tech Log photos. This
+        report is created locally on your device. Sharing/exporting (WhatsApp, email, etc.) only happens if
+        you explicitly choose to share it using your device’s share options.
+      </p>
 
-  <h2>Reports and sharing</h2>
-  <p>
-    If you generate and share a PDF report, the content shared is the content you created in the app
-    (including any photos you attached). Sharing is initiated by you using the system share sheet.
-  </p>
+      <h2>Purchases (Pro Version)</h2>
+      <p>
+        If you purchase the Pro version, the purchase is processed by Apple App Store / Google Play. We do
+        not collect or store your payment details. The store may provide the app with a non-personal
+        entitlement status so the app can unlock Pro features.
+      </p>
 
-  <h2>Data retention and deletion</h2>
-  <p>
-    Data is stored locally on your device. You can delete log entries inside the app.
-    Removing the app from your device typically removes locally stored data.
-  </p>
+      <h2>Permissions</h2>
+      <p class="muted">
+        The app may request permission to:
+      </p>
+      <ul>
+        <li>Access photos/media (to save or attach Tech Log photos)</li>
+        <li>Storage access (to create/export the PDF)</li>
+      </ul>
+      <p class="muted">
+        You can manage permissions at any time in your device settings.
+      </p>
 
-  <h2>Contact</h2>
-  <p>
-    For privacy questions, contact:
-    <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
-  </p>
+      <h2>Contact</h2>
+      <p>
+        If you have questions, contact us at:
+        <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
+      </p>
+
+      <p class="muted">
+        Tip: In the stores you will paste the URL to this page, for example:
+        <code>https://aircraft-tech-tools.github.io/privacy.html</code>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © Aircraft Tech Tools. All rights reserved.
+  </footer>
 </body>
 </html>
+
