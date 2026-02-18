@@ -8,9 +8,9 @@
   <meta name="description" content="Aircraft Tech Tools support: help, feature requests, bug reports, and privacy policy." />
   <meta name="theme-color" content="#071B33" />
 
-  <!-- Favicon / App icon -->
-  <link rel="icon" type="image/png" href="./assets/icon-192.png" />
-  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <!-- Favicon / App icon (using ONLY the 1024px icon) -->
+  <link rel="icon" type="image/png" href="./assets/icon-1024.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-1024.png" />
 
   <!-- Open Graph (nice previews when sharing) -->
   <meta property="og:title" content="Support — Aircraft Tech Tools" />
@@ -44,7 +44,6 @@
       min-height:100vh;
     }
 
-    /* nicer focus for keyboard users */
     :focus-visible{
       outline: 2px solid rgba(114,223,255,.9);
       outline-offset: 3px;
@@ -73,7 +72,6 @@
       min-width: 280px;
     }
 
-    /* REAL APP ICON */
     .logo{
       width:46px;
       height:46px;
@@ -212,7 +210,6 @@
       color: rgba(234,242,255,.70);
     }
 
-    /* subtle separator line on big screens */
     @media (min-width: 860px){
       .wrap{ padding-top: 30px; }
     }
@@ -224,8 +221,7 @@
     <header>
       <div class="brand">
         <div class="logo">
-          <!-- Change path if your icon is elsewhere -->
-          <img src="./assets/icon-192.png" alt="Aircraft Tech Tools app icon" />
+          <img src="./assets/icon-1024.png" alt="Aircraft Tech Tools app icon" />
         </div>
         <div>
           <h1>Aircraft Tech Tools</h1>
@@ -238,7 +234,6 @@
           <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
         </div>
 
-        <!-- One clear CTA -->
         <a class="btn"
            href="mailto:info@a32xtools.com?subject=Aircraft%20Tech%20Tools%20Support&body=Please%20include%3A%0A-%20Device%20model%0A-%20OS%20version%0A-%20App%20version%0A-%20Steps%20to%20reproduce%20(screen%20%E2%86%92%20action%20%E2%86%92%20result)%0A%0ADescription%3A%0A"
            aria-label="Email support">
@@ -292,6 +287,7 @@
   </script>
 </body>
 </html>
+
 
 
 
