@@ -14,8 +14,6 @@
       --text:#EAF2FF;
       --muted:rgba(234,242,255,.75);
       --link:#72DFFF;
-      --btn:#2E5DB6;
-      --btn2:#1C3F86;
     }
     *{box-sizing:border-box}
     body{
@@ -70,6 +68,7 @@
       color: rgba(255,255,255,.82);
       font-size: 12px;
       letter-spacing:.3px;
+      white-space: nowrap;
     }
 
     .grid{
@@ -103,29 +102,6 @@
     a{ color: var(--link); text-decoration: none; }
     a:hover{ text-decoration: underline; }
 
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.20);
-      background: linear-gradient(180deg, rgba(114,223,255,.30), rgba(46,93,182,.85));
-      color: rgba(255,255,255,.95);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing:.2px;
-      box-shadow: 0 14px 26px rgba(0,0,0,.25);
-    }
-    .btn.secondary{
-      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.90);
-      box-shadow:none;
-      font-weight: 700;
-    }
-
     .note{
       margin-top: 10px;
       padding: 10px 12px;
@@ -145,7 +121,6 @@
       color: rgba(255,255,255,.62);
       font-size: 12px;
     }
-    .footerlinks{ display:flex; gap: 12px; flex-wrap:wrap; }
   </style>
 </head>
 
@@ -156,34 +131,25 @@
         <div class="logo" aria-hidden="true"></div>
         <div>
           <h1>Aircraft Tech Tools</h1>
-          <div class="sub">Support & Contact</div>
+          <div class="sub">Support</div>
         </div>
       </div>
-      <div class="pill"><a href="mailto:info@a32xtools.com">info@a32xtools.com</a></div>
+
+      <!-- Email shown once (and only once) -->
+      <div class="pill">
+        <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
+      </div>
     </header>
 
     <div class="grid">
       <section class="card">
         <h2>Support</h2>
         <p>
-          Need help, want to request a feature, or report a bug? Email us with your device model, OS version,
+          For help, feature requests, or bug reports, email us. Include your device model, OS version,
           and a short description of what happened.
         </p>
-
-        <div class="btnrow">
-          <a class="btn" href="mailto:info@a32xtools.com?subject=Aircraft%20Tech%20Tools%20Support">
-            Email Support
-          </a>
-
-          <a class="btn secondary"
-             href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html"
-             target="_blank" rel="noopener">
-            Privacy Policy
-          </a>
-        </div>
-
         <div class="note">
-          For crashes, include the exact steps to reproduce (screen → action → result).
+          If you’re reporting a crash, include the steps to reproduce (screen → action → result).
         </div>
       </section>
 
@@ -201,8 +167,9 @@
 
     <footer>
       <div>© <span id="y"></span> Aircraft Tech Tools</div>
-      <div class="footerlinks">
-        <a href="mailto:info@a32xtools.com">Contact</a>
+
+      <!-- Privacy shown once (and only once) -->
+      <div>
         <a href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html" target="_blank" rel="noopener">
           Privacy Policy
         </a>
@@ -215,5 +182,6 @@
   </script>
 </body>
 </html>
+
 
 
