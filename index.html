@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Support – Aircraft Tech Tools</title>
+  <title>Support — Aircraft Tech Tools</title>
   <meta name="robots" content="index,follow" />
+  <meta name="description" content="Aircraft Tech Tools support: help, feature requests, bug reports, and privacy policy." />
+  <meta name="theme-color" content="#071B33" />
+
+  <!-- Favicon / App icon -->
+  <link rel="icon" type="image/png" href="./assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+
+  <!-- Open Graph (nice previews when sharing) -->
+  <meta property="og:title" content="Support — Aircraft Tech Tools" />
+  <meta property="og:description" content="Get help, report bugs, request features, and access the privacy policy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/icon-1024.png" />
+
   <style>
     :root{
       --bg:#071B33;
@@ -14,8 +27,13 @@
       --text:#EAF2FF;
       --muted:rgba(234,242,255,.75);
       --link:#72DFFF;
+      --shadow: 0 18px 34px rgba(0,0,0,.20);
+      --radius: 18px;
+      --max: 980px;
     }
-    *{box-sizing:border-box}
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -25,31 +43,54 @@
         linear-gradient(135deg, var(--bg2), var(--bg));
       min-height:100vh;
     }
-    .wrap{
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 28px 18px 40px;
+
+    /* nicer focus for keyboard users */
+    :focus-visible{
+      outline: 2px solid rgba(114,223,255,.9);
+      outline-offset: 3px;
+      border-radius: 10px;
     }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 26px 18px 44px;
+    }
+
     header{
       display:flex;
       gap:14px;
       align-items:center;
       justify-content:space-between;
       flex-wrap:wrap;
-      margin-bottom:18px;
+      margin-bottom:16px;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
+      min-width: 280px;
     }
+
+    /* REAL APP ICON */
     .logo{
-      width:44px;height:44px;
-      border-radius:12px;
-      background: linear-gradient(180deg, rgba(114,223,255,.45), rgba(46,93,182,.85));
+      width:46px;
+      height:46px;
+      border-radius: 12px;
       border:1px solid rgba(255,255,255,.22);
       box-shadow: 0 10px 22px rgba(0,0,0,.28);
+      overflow:hidden;
+      background: rgba(255,255,255,.06);
+      flex: 0 0 auto;
     }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
     h1{
       font-size: 20px;
       margin:0;
@@ -60,33 +101,61 @@
       color: var(--muted);
       font-size: 13px;
     }
+
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
     .pill{
-      padding: 7px 10px;
+      padding: 8px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.14);
       color: rgba(255,255,255,.82);
       font-size: 12px;
-      letter-spacing:.3px;
+      letter-spacing:.2px;
       white-space: nowrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(114,223,255,.14);
+      color: var(--text);
+      text-decoration:none;
+      font-size: 13px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.18);
+    }
+    .btn:hover{
+      text-decoration:none;
+      background: rgba(114,223,255,.20);
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr;
       gap: 12px;
+      margin-top: 10px;
     }
-    @media (min-width: 820px){
+    @media (min-width: 860px){
       .grid{ grid-template-columns: 1.15fr .85fr; }
     }
 
     .card{
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: var(--radius);
       padding: 16px;
-      box-shadow: 0 18px 34px rgba(0,0,0,.20);
+      box-shadow: var(--shadow);
     }
+
     h2{
       margin: 0 0 10px;
       font-size: 16px;
@@ -95,17 +164,25 @@
     p{
       margin: 0 0 10px;
       color: var(--muted);
-      line-height:1.45;
+      line-height:1.5;
       font-size: 14px;
     }
 
     a{ color: var(--link); text-decoration: none; }
     a:hover{ text-decoration: underline; }
 
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height:1.5;
+    }
+
     .note{
-      margin-top: 10px;
+      margin-top: 12px;
       padding: 10px 12px;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px dashed rgba(255,255,255,.22);
       background: rgba(0,0,0,.10);
       color: rgba(255,255,255,.84);
@@ -120,6 +197,24 @@
       flex-wrap:wrap;
       color: rgba(255,255,255,.62);
       font-size: 12px;
+      align-items:center;
+    }
+
+    .footer-links{
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .small{
+      font-size: 12px;
+      color: rgba(234,242,255,.70);
+    }
+
+    /* subtle separator line on big screens */
+    @media (min-width: 860px){
+      .wrap{ padding-top: 30px; }
     }
   </style>
 </head>
@@ -128,16 +223,27 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <div class="logo">
+          <!-- Change path if your icon is elsewhere -->
+          <img src="./assets/icon-192.png" alt="Aircraft Tech Tools app icon" />
+        </div>
         <div>
           <h1>Aircraft Tech Tools</h1>
           <div class="sub">Support</div>
         </div>
       </div>
 
-      <!-- Email shown once (and only once) -->
-      <div class="pill">
-        <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
+      <div class="actions">
+        <div class="pill">
+          <a href="mailto:info@a32xtools.com">info@a32xtools.com</a>
+        </div>
+
+        <!-- One clear CTA -->
+        <a class="btn"
+           href="mailto:info@a32xtools.com?subject=Aircraft%20Tech%20Tools%20Support&body=Please%20include%3A%0A-%20Device%20model%0A-%20OS%20version%0A-%20App%20version%0A-%20Steps%20to%20reproduce%20(screen%20%E2%86%92%20action%20%E2%86%92%20result)%0A%0ADescription%3A%0A"
+           aria-label="Email support">
+          ✉️ Email Support
+        </a>
       </div>
     </header>
 
@@ -145,11 +251,16 @@
       <section class="card">
         <h2>Support</h2>
         <p>
-          For help, feature requests, or bug reports, email us. Include your device model, OS version,
-          and a short description of what happened.
+          For help, feature requests, or bug reports, email us. Including the details below helps us reply faster:
         </p>
+        <ul class="list">
+          <li>Device model</li>
+          <li>OS version</li>
+          <li>App version</li>
+          <li>Steps to reproduce (screen → action → result)</li>
+        </ul>
         <div class="note">
-          If you’re reporting a crash, include the steps to reproduce (screen → action → result).
+          If you’re reporting a crash, tell us what you were doing right before it happened (and attach screenshots if possible).
         </div>
       </section>
 
@@ -159,8 +270,8 @@
           Aircraft Tech Tools provides quick utilities for line maintenance workflows, including MEL deadline calculation
           and a Deferred Log (Pro) to track daily callouts, attach Tech Log photos, and generate a share-ready PDF report.
         </p>
-        <p>
-          For purchase-related questions, include the order reference if available.
+        <p class="small">
+          Purchase-related questions: include an order reference if available.
         </p>
       </section>
     </div>
@@ -168,8 +279,7 @@
     <footer>
       <div>© <span id="y"></span> Aircraft Tech Tools</div>
 
-      <!-- Privacy shown once (and only once) -->
-      <div>
+      <div class="footer-links">
         <a href="https://adriaraventosruiz01-ops.github.io/aircraft-tech-tools.github.io/privacy.html" target="_blank" rel="noopener">
           Privacy Policy
         </a>
