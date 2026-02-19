@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacy Policy – Aircraft Tech Tools</title>
+  <title>Privacy Policy — Aircraft Tech Tools</title>
   <meta name="robots" content="index,follow" />
+  <meta name="description" content="Aircraft Tech Tools privacy policy." />
+  <meta name="theme-color" content="#071B33" />
+
+  <!-- Favicon / App icon (using ONLY the 1024px icon) -->
+  <link rel="icon" type="image/png" href="./assets/icon-1024.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-1024.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy — Aircraft Tech Tools" />
+  <meta property="og:description" content="Aircraft Tech Tools privacy policy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/icon-1024.png" />
+
   <style>
     :root{
       --bg:#071B33;
@@ -14,8 +27,12 @@
       --text:#EAF2FF;
       --muted:rgba(234,242,255,.75);
       --link:#72DFFF;
+      --shadow: 0 18px 34px rgba(0,0,0,.20);
+      --radius: 18px;
+      --max: 920px;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -27,50 +44,72 @@
       line-height:1.5;
     }
 
+    :focus-visible{
+      outline: 2px solid rgba(114,223,255,.9);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
     .wrap{
-      max-width: 920px;
+      max-width: var(--max);
       margin: 0 auto;
       padding: 28px 18px 40px;
     }
 
     header{
       display:flex;
-      gap:14px;
+      gap:16px;
       align-items:center;
       justify-content:space-between;
       flex-wrap:wrap;
       margin-bottom:18px;
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
+      gap:14px;
+      min-width: 280px;
     }
+
+    /* SAME BIG LOGO AS SUPPORT */
     .logo{
-      width:44px;height:44px;
-      border-radius:12px;
-      background: linear-gradient(180deg, rgba(114,223,255,.45), rgba(46,93,182,.85));
+      width:72px;
+      height:72px;
+      border-radius: 18px;
       border:1px solid rgba(255,255,255,.22);
-      box-shadow: 0 10px 22px rgba(0,0,0,.28);
+      box-shadow: 0 12px 26px rgba(0,0,0,.30);
+      overflow:hidden;
+      background: rgba(255,255,255,.06);
+      flex: 0 0 auto;
     }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
     h1{
-      font-size: 20px;
+      font-size: 22px;
       margin:0;
       letter-spacing:.2px;
     }
     .sub{
-      margin: 2px 0 0;
+      margin: 4px 0 0;
       color: var(--muted);
       font-size: 13px;
     }
+
     .pill{
-      padding: 7px 10px;
+      padding: 9px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.14);
       color: rgba(255,255,255,.82);
       font-size: 12px;
-      letter-spacing:.3px;
+      letter-spacing:.2px;
+      white-space: nowrap;
     }
 
     .card{
@@ -78,7 +117,7 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 16px;
-      box-shadow: 0 18px 34px rgba(0,0,0,.20);
+      box-shadow: var(--shadow);
     }
 
     h2{
@@ -115,6 +154,7 @@
       flex-wrap:wrap;
       color: rgba(255,255,255,.62);
       font-size: 12px;
+      align-items:center;
     }
     .footerlinks{ display:flex; gap: 12px; flex-wrap:wrap; }
 
@@ -140,7 +180,9 @@
       font-size: 13px;
       letter-spacing:.2px;
       text-decoration:none;
+      white-space: nowrap;
     }
+    .btn:hover{ text-decoration:none; background: rgba(255,255,255,.10); }
   </style>
 </head>
 
@@ -148,7 +190,9 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <div class="logo">
+          <img src="./assets/icon-1024.png" alt="Aircraft Tech Tools app icon" />
+        </div>
         <div>
           <h1>Privacy Policy</h1>
           <div class="sub">Aircraft Tech Tools</div>
